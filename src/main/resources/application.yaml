@@ -11,6 +11,3 @@ management:
   endpoints:
     health:
       show-details: when-authorized
-
-
-
