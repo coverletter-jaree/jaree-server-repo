@@ -2,7 +2,7 @@
   <configuration default="false" name="LocalApplicationRun" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
     <option name="ACTIVE_PROFILES" value="local" />
     <module name="api.main" />
-    <option name="SPRING_BOOT_MAIN_CLASS" value="org.temp.api.ApiApplication" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.jaree.api.ApiApplication" />
     <extension name="net.ashald.envfile">
       <option name="IS_ENABLED" value="false" />
       <option name="IS_SUBST" value="false" />
