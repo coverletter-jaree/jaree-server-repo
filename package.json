@@ -1,0 +1,15 @@
+{
+  "name": "jaree-server-repo",
+  "version": "1.0.0",
+  "description": "Java Spring Boot API Server",
+  "private": true,
+  "scripts": {
+    "dev": "./gradlew bootRun",
+    "build": "./gradlew build",
+    "test": "./gradlew test",
+    "clean": "./gradlew clean"
+  },
+  "keywords": ["java", "spring-boot", "gradle"],
+  "author": "",
+  "license": "ISC"
+}
