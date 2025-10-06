@@ -3,6 +3,13 @@ spring:
     import:
     - 'optional:file:env/local.env[.properties]'
 
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+      exclude: static/**,public/**,templates/**
+    add-properties: true
+
   data:
     mongodb:
       uri: mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE}
