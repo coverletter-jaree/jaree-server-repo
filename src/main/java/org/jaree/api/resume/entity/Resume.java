@@ -1,6 +1,7 @@
 package org.jaree.api.resume.entity;
 
 import java.util.List;
+import java.util.Map;
 
 import org.jaree.api.user.entity.User;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
@@ -13,6 +14,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Resume: 이력서 엔티티
+ * - 학력, 경험, 경력 등을 작성하는 이력서
+ */
 @Data
 @Builder
 @NoArgsConstructor
@@ -24,17 +29,8 @@ public class Resume {
     private Long id;
 
     @Relationship(type = "WRITTEN_BY", direction = Relationship.Direction.OUTGOING)
-    private User user;
+    private User user;      // 이력서 작성한 사용자
 
-    private String middleSchoolName;
-    private String highSchoolName;
-    private String universityName;
-    private String mastersUniversityName;
-    private String phdUniversityName;
-
-    @Relationship(type = "HAS_WORK_EXPERIENCE", direction = Relationship.Direction.OUTGOING)
-    private List<WorkExperience> workExperiences;
-
-    @Relationship(type = "HAS_PROJECT", direction = Relationship.Direction.OUTGOING)
-    private List<Project> projects;
+    @Relationship(direction = Relationship.Direction.OUTGOING)
+    private List<ResumeRelationship> data;     // 이력서 저장 데이터(내용) 목록
 }
